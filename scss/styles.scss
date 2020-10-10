@@ -1,5 +1,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+$bg-color: #1f2944;
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -47,4 +48,39 @@ h2 {
   background-size: cover;
   color: white;
   margin-bottom: 4rem;
+}
+
+.bg-primary {
+  background-color: $bg-color !important;
+  color: white;
+}
+
+#text-indicators {
+  .active {
+    border-bottom: 3px solid #ff6900;
+  }
+
+  li {
+    padding-right: 0;
+    padding-left: 0;
+    font-weight: 600;
+    list-style-type: none;
+  }
+}
+
+.carousel-indicators {
+  bottom: -60px;
+
+  .active {
+    background-color: lightgrey;
+  }
+
+  li {
+    margin-right: 25px;
+    margin-left: 25px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid grey;
+  }
 }
