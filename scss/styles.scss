@@ -43,6 +43,12 @@ h2 {
   height: 90px;
 }
 
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  box-shadow: nonce;
+}
+
 .jumbotron {
   background-image: url("../../../../img/pexels-burst-373912.jpg");
   background-size: cover;
@@ -61,6 +67,7 @@ h2 {
   }
 
   li {
+    cursor: pointer;
     padding-right: 0;
     padding-left: 0;
     font-weight: 600;
@@ -82,5 +89,13 @@ h2 {
     height: 10px;
     border-radius: 50%;
     border: 1px solid grey;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .dropdown-menu {
+    top: 177%;
+    border: none;
+    border-radius: 0;
+    box-shadow: inset 0 4px 8px -6px rgba(0,0,0,.5);
   }
 }
