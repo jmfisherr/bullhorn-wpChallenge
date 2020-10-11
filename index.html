@@ -155,35 +155,21 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Carousel Mods -->
   <script>
-    // GET max slide num
-    var finalSlide = $(".carousel-indicators li").length - 1;
-    console.log("The last slide is #" + finalSlide);
-
     $('#text-indicators ol li').on('click', function()
     {
-      console.log("You clicked on a text-indicator");
-      console.log("The slide you clicked on is #" + $('#text-indicators ol li').index(this))
-
-      // $("#text-indicators .active").removeClass("active");
-      // $(this).addClass("active");
-
       // Go to the slide you clicked on
       $('.carousel').carousel($('#text-indicators ol li').index(this));
     });
 
     $('#carousel').on('slide.bs.carousel', function(slideEvent)
     {
-
       // GET last slide #
       var lastSlide = slideEvent.from;
-      console.log("The last slide was " + lastSlide);
       $("#text-indicators ol li").eq(lastSlide).removeClass("active");
 
       // GET next slide #
       var nextSlide = slideEvent.to;
-      console.log("The next slide is " + nextSlide);
       $("#text-indicators ol li").eq(nextSlide).addClass("active");
-
     })
   </script>
 </body>
